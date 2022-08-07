@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.row-bg {
   min-height: 100vh;
+  background: rgb(244, 172, 160);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 172, 160, 1) 0%,
+    rgba(244, 186, 166, 1) 47%,
+    rgba(247, 212, 174, 1) 95%
+  );
+}
+
+.cart-container {
+  margin: 10vh 0;
+  border-radius: 20px;
+}
+
+.cart-container .cart {
+  min-height: 30vh;
+  background-color: #ffede3;
+}
+
+.cart .cart-item {
+  position: relative;
+  background-color: #fff;
+  transition: 0.4s all ease-in;
+}
+
+.cart .cart-item .remove-item {
+  transition: inherit;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 0;
+  align-items: center;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  box-shadow: -5px 10px 11px -8px rgba(73, 73, 73, 0.6);
+  top: -10px;
+  right: -10px;
+  color: rgba(232, 62, 65, 1);
+  font-size: bold;
+  background-color: #fff;
+  opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.cart .cart-item:hover {
+  cursor: pointer;
+  background-color: rgb(255, 249, 242);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart .cart-item:hover .remove-item {
+  opacity: 1;
+}
+
+.cart-container .header {
+  background: #fff;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cart-container .footer {
+  background: rgb(214, 80, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(214, 80, 130, 1) 0%,
+    rgba(218, 74, 106, 1) 42%,
+    rgba(232, 62, 65, 1) 68%
+  );
+  color: #fff;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
 }
